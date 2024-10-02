@@ -58,7 +58,7 @@ class MatcherPipeline:
 
         # Geocode with the first matcher
         matcher = self.matchers[0]
-        results = matcher.geocode(addresses)
+        results = matcher.geocode(addresses, address_ids)
         threshold = matcher.threshold
 
         matched, unmatched = get_unmatched(results, threshold)
